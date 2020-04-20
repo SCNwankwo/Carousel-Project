@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="Carousel3.css">
+	<!-- <link rel="stylesheet" type="text/css" href="rough.css"> -->
+</head>
+<body>
+	<script type="text/javascript">
+		onload  = start;
+
+		function start(){	
+		var i = 1;
+		function Move(){ 	
+			i = (i%4)+1; // 4 is the Number of image in slider
+			document.getElementById('i'+i).checked = true;
+		}
+		setInterval(Move,3000); //change img in 3 sec
+		}
+	</script>
+	<div class="container">
+	
+
+		<input type="radio" id="i1" name="images" checked/>
+		<input type="radio" id="i2" name="images" />
+		<input type="radio" id="i3" name="images" />
+		<input type="radio" id="i4" name="images"  />
+		
+		<div class="slide_img" id="one">			
+				
+				<img src="images/Benz.jpg">
+				<label class="prev" for="i4"><span></span></label>
+				<label class="next" for="i2"><span></span></label>	
+			
+		</div>
+		
+		<div class="slide_img" id="two">
+			
+				<img src="images/DodgeViper.jpg " >
+				<label class="prev" for="i1"><span></span></label>
+				<label class="next" for="i3"><span></span></label>
+			
+		</div>
+				
+		<div class="slide_img" id="three">
+				<img src="images/Audi.jpg">	
+				<label class="prev" for="i2"><span></span></label>
+				<label class="next" for="i4"><span></span></label>
+		</div>
+
+
+		<div class="slide_img" id="four">
+				<img src="images/Ferrari.jpg">	
+				<label class="prev" for="i3"><span></span></label>
+				<label class="next" for="i1"><span></span></label>
+
+		</div>
+
+		<div id="nav_slide">
+			<label for="i1" class="dots" id="dot1"></label>
+			<label for="i2" class="dots" id="dot2"></label>
+			<label for="i3" class="dots" id="dot3"></label>
+			<label for="i4" class="dots" id="dot4"></label>
+		</div>
+		
+	</div>
+
+</body>
+</html>
